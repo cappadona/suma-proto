@@ -4,7 +4,9 @@ module.exports = config:
     enabled: true
   files:
     javascripts:
-      joinTo: 'js/app.js'
+      joinTo:
+        'js/app.js': /^node_modules/
+        'js/vendor.js': /^vendor/
       order:
         before: [
           'node_modules/jquery/dist/jquery.js'

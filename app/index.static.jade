@@ -18,37 +18,11 @@ html(lang='en')
         li.nav-item.pull-right
           a.nav-link.btn.btn-success-outline(href='#') Finish collecting
     .container-fluid
-      #content.container_12
-        .grid_5.sidebar(id='')
-          .pad_div
-            h4.initiative-select Select an initiative
-            form#init_form
-              select#init_selector
-                option(value='') --
-                option.initOpt(value='8E092130E36645E5B995DF5DDAF86DD3') FOD
-                option.initOpt(value='96B74A9EC9C1496E88B6C51B41865D9C') Space Usage
-            h4#loc_header(style='display: block;') Tap on a location:
-            #loc_lists
-              ul.loc_list
-                h5 Mann Library - short
-                li.loc_item
-                  a#loc94608D20871E41018BDF588AC767EAAF(href='94608D20871E41018BDF588AC767EAAF')
-                    | Basement
-                    span.locCount
-                li.loc_item
-                  a#loc58CC4495583748449CE194C93B8BA7EB(href='58CC4495583748449CE194C93B8BA7EB')
-                    | 1st Floor
-                    span.locCount
-                li.loc_item
-                  a#locE9E6160B1394412E85922AECAEA2CC6F(href='E9E6160B1394412E85922AECAEA2CC6F')
-                    | 2nd Floor
-                    span.locCount
-                li.loc_item
-                  a#loc29EE58C71B174640956542ED658C8F53(href='29EE58C71B174640956542ED658C8F53')
-                    | 3rd Floor
-                    span.locCount
-        .grid_7.main_entry(id='')
-          h3#current_loc_label No current location
+      .row.row-offcanvas.row-offcanvas-left
+        .col-xs-12.col-sm-9
+          p
+            button(data-toggle='offcanvas').btn.btn-primary.btn-xs toggle
+          h3#current_loc_label Mann Library
           #counting_container
             form#count_form
               #activityGroupContainer
@@ -125,6 +99,33 @@ html(lang='en')
                       span.ui-button-text NA - no computer
               input#countInput(type='number', name='countInput', value='1', min='1')
               input#goesup.tappable(type='button', name='goesup', value='Count')
+        #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas.bg-faded
+          h5.initiative-select Select an initiative
+          form#init_form
+            select#init_selector
+              option(value='') --
+              option.initOpt(value='8E092130E36645E5B995DF5DDAF86DD3') FOD
+              option.initOpt(value='96B74A9EC9C1496E88B6C51B41865D9C' selected) Space Usage
+          h5#loc_header(style='display: block;') And a location:
+          #loc_lists
+            ul.loc_list
+              h6 Mann Library
+              li.loc_item
+                a#loc94608D20871E41018BDF588AC767EAAF(href='94608D20871E41018BDF588AC767EAAF')
+                  | Basement
+                  span.locCount
+              li.loc_item
+                a#loc58CC4495583748449CE194C93B8BA7EB(href='58CC4495583748449CE194C93B8BA7EB')
+                  | 1st Floor
+                  span.locCount
+              li.loc_item
+                a#locE9E6160B1394412E85922AECAEA2CC6F(href='E9E6160B1394412E85922AECAEA2CC6F')
+                  | 2nd Floor
+                  span.locCount
+              li.loc_item
+                a#loc29EE58C71B174640956542ED658C8F53(href='29EE58C71B174640956542ED658C8F53')
+                  | 3rd Floor
+                  span.locCount
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons(tabindex='-1', role='dialog', aria-describedby='spaceAssessDialog', aria-labelledby='ui-id-1', style='height: auto; width: auto; top: 246px; left: 88px; display: none; z-index: 101; overflow: visible;')
       .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
         span#ui-id-1.ui-dialog-title Space Usage Census Tool
@@ -161,3 +162,4 @@ html(lang='en')
           button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(type='button', role='button')
             span.ui-button-text Keep Collecting
     script(src='js/app.js')
+    script(src='js/vendor.js')

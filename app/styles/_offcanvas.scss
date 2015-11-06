@@ -1,0 +1,40 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  padding-top: 4rem;
+}
+footer {
+  padding: 2rem 0;
+}
+@include media-breakpoint-up(xs) {
+  .row-offcanvas {
+    position: relative;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: all .25s ease-out;
+  }
+  .row-offcanvas-right {
+    right: 0;
+    .sidebar-offcanvas {
+      right: -30%;
+    }
+    &.active {
+      right: 30%;
+    }
+  }
+  .row-offcanvas-left {
+    left: 0;
+    .sidebar-offcanvas {
+      left: -30%;
+    }
+    &.active {
+      left: 30%;
+    }
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 30%;
+  }
+}
