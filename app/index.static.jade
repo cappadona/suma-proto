@@ -6,25 +6,158 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-    title Brunch with Foo
+    title Suma: Space Usage Tool
     link(href='app.css', rel='stylesheet')
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top
-      a.navbar-brand(href='#') Project name
+    nav.navbar.navbar-light.navbar-fixed-top.bg-faded
       ul.nav.nav-pills
-        li.nav-item.active
-          a.nav-link(href='#')
-            | Home
-            span.sr-only (current)
         li.nav-item
-          a.nav-link(href='#') About
-        li.nav-item
-          a.nav-link(href='#') Contact
-    .container
-      .starter-template
-        h1 Bootstrap starter template
-        p.lead
-          | Use this document as a way to quickly start any new project.
-          br
-          |  All you get is this text and a mostly barebones HTML document.
+          a.nav-link.btn.btn-warning-outline(href='#') Undo last count
+        li.nav-item.abandon
+          a.nav-link.btn.btn-danger-outline(href='#') Abandon counts
+        li.nav-item.pull-right
+          a.nav-link.btn.btn-success-outline(href='#') Finish collecting
+    .container-fluid
+      #content.container_12
+        .grid_5.sidebar(id='')
+          .pad_div
+            h4.initiative-select Select an initiative
+            form#init_form
+              select#init_selector
+                option(value='') --
+                option.initOpt(value='8E092130E36645E5B995DF5DDAF86DD3') FOD
+                option.initOpt(value='96B74A9EC9C1496E88B6C51B41865D9C') Space Usage
+            h4#loc_header(style='display: block;') Tap on a location:
+            #loc_lists
+              ul.loc_list
+                h5 Mann Library - short
+                li.loc_item
+                  a#loc94608D20871E41018BDF588AC767EAAF(href='94608D20871E41018BDF588AC767EAAF')
+                    | Basement
+                    span.locCount
+                li.loc_item
+                  a#loc58CC4495583748449CE194C93B8BA7EB(href='58CC4495583748449CE194C93B8BA7EB')
+                    | 1st Floor
+                    span.locCount
+                li.loc_item
+                  a#locE9E6160B1394412E85922AECAEA2CC6F(href='E9E6160B1394412E85922AECAEA2CC6F')
+                    | 2nd Floor
+                    span.locCount
+                li.loc_item
+                  a#loc29EE58C71B174640956542ED658C8F53(href='29EE58C71B174640956542ED658C8F53')
+                    | 3rd Floor
+                    span.locCount
+        .grid_7.main_entry(id='')
+          h3#current_loc_label No current location
+          #counting_container
+            form#count_form
+              #activityGroupContainer
+                .activityGroup.clearfix
+                  h5.actGroupLabel Participants
+                  .leftActivities.activityContainer
+                    input#check29.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='AF580A6B5B914891B06535A0E5AC259E')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check29', role='button')
+                      span.ui-button-text 1 person
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check31', role='button')
+                      span.ui-button-text 5-7 people
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check39', role='button')
+                      span.ui-button-text 10+ people
+                    input#check30.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='82AB657A3BEC46418FCD2D1423CC8832')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check30', role='button')
+                      span.ui-button-text 2-4 people
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check32', role='button')
+                      span.ui-button-text 8-10 people
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check71', role='button')
+                      span.ui-button-text 0 (No one is present)
+                  h5.actGroupLabel Activity
+                  .leftActivities.activityContainer
+                    input#check40.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='C3B4B84762E04AC4A8A48272655ED40A')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check40', role='button')
+                      span.ui-button-text Studying / reading
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check42', role='button')
+                      span.ui-button-text Socializing
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check70', role='button')
+                      span.ui-button-text NA - no activity
+                    input#check41.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='8423DFF1CD134DEB9D8E5A503C8685DC')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check41', role='button')
+                      span.ui-button-text Sleeping
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check69', role='button')
+                      span.ui-button-text Chilling (Not Sleeping)
+                  h5.actGroupLabel Furniture Usage
+                  .leftActivities.activityContainer
+                    input#check94.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='5D28D488317F4FCE9A8FC69AAFBC1D80')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check94', role='button')
+                      span.ui-button-text Study Carrel/Pod
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check44', role='button')
+                      span.ui-button-text Group Table (2+)
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check61', role='button')
+                      span.ui-button-text Table Counter Height
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check48', role='button')
+                      span.ui-button-text Soft Seating (Couches / Soft Chairs / Ottomans)
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check74', role='button')
+                      span.ui-button-text Fixed LCD
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check50', role='button')
+                      span.ui-button-text Whiteboards
+                    input#check72.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='B5A1B3F6A2694B8BB0B0ED91D854FBF6')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check72', role='button')
+                      span.ui-button-text Indiv Table (1 Only)
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check62', role='button')
+                      span.ui-button-text Booth
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check66', role='button')
+                      span.ui-button-text Laptop Table
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check47', role='button')
+                      span.ui-button-text Bean Bags
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check46', role='button')
+                      span.ui-button-text Mobile LCD
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check75', role='button')
+                      span.ui-button-text N/A - no furniture
+                  h5.actGroupLabel Computer Usage
+                  .leftActivities.activityContainer
+                    input#check76.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='1B56857B68A741EF807051481D07A5FB')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check76', role='button')
+                      span.ui-button-text Built in Computer
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check28', role='button')
+                      span.ui-button-text Tablet
+                    input#check27.check.jqButton.activityButton.ui-helper-hidden-accessible(type='checkbox', value='CA049B2716134A4F8B4ABCEF04F169D3')
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check27', role='button')
+                      span.ui-button-text Laptop
+                    label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(for='check73', role='button')
+                      span.ui-button-text NA - no computer
+              input#countInput(type='number', name='countInput', value='1', min='1')
+              input#goesup.tappable(type='button', name='goesup', value='Count')
+    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons(tabindex='-1', role='dialog', aria-describedby='spaceAssessDialog', aria-labelledby='ui-id-1', style='height: auto; width: auto; top: 246px; left: 88px; display: none; z-index: 101; overflow: visible;')
+      .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
+        span#ui-id-1.ui-dialog-title Space Usage Census Tool
+        button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close(type='button', role='button', title='Close')
+          span.ui-button-icon-primary.ui-icon.ui-icon-closethick
+          span.ui-button-text Close
+      #spaceAssessDialog.ui-dialog-content.ui-widget-content(style='width: auto; min-height: 9px; max-height: none; height: auto;')
+        p Just hit the button to start collecting.
+        p
+          | Don't worry if you didn't mean to end your session; the last session has been saved, and any new data will be stored in another session.
+      .ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix
+        .ui-dialog-buttonset
+          button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(type='button', role='button')
+            span.ui-button-text Start Collecting
+    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front(tabindex='-1', role='dialog', aria-describedby='loadingScreen', aria-labelledby='ui-id-2', style='height: auto; width: 200px; top: 312.5px; left: 474.5px; display: none; z-index: 101;')
+      .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
+        span#ui-id-2.ui-dialog-title Processing...
+        button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close(type='button', role='button', title='Close')
+          span.ui-button-icon-primary.ui-icon.ui-icon-closethick
+          span.ui-button-text Close
+      #loadingScreen.ui-dialog-content.ui-widget-content(style='width: auto; min-height: 24px; max-height: none; height: auto;') Please wait...
+    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons(tabindex='-1', role='dialog', aria-describedby='abandonContent', aria-labelledby='ui-id-3', style='display: none;')
+      .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
+        span#ui-id-3.ui-dialog-title Abandon Session
+        button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close(type='button', role='button', title='Close')
+          span.ui-button-icon-primary.ui-icon.ui-icon-closethick
+          span.ui-button-text Close
+      #abandonContent.ui-dialog-content.ui-widget-content(style='')
+        | Are you sure you want to delete the data you've just collected? The data you've collected since hitting "start" will be deleted permanently.
+      .ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix
+        .ui-dialog-buttonset
+          button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(type='button', role='button')
+            span.ui-button-text DELETE
+          button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only(type='button', role='button')
+            span.ui-button-text Keep Collecting
     script(src='js/app.js')
