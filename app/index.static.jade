@@ -124,8 +124,9 @@ html(lang='en')
                     label.btn.btn-secondary(for='check27', role='button')
                       input#check27(type='checkbox', autocomplete='off')
                       | NA - no computer
-              input#countInput(type='number', name='countInput', value='1', min='1' hidden)
-              input#goesup.btn.btn-primary-outline(type='button', name='goesup', value='Count')
+        nav.footer.navbar.navbar-light.navbar-fixed-bottom.bg-faded
+          input#countInput(type='number', name='countInput', value='1', min='1' hidden)
+          input#goesup.btn.btn-primary-outline.btn-lg.center-block(type='button', name='goesup', value='Count')
         #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas.bg-faded
           h5.initiative-select Select an initiative
           form#init_form
