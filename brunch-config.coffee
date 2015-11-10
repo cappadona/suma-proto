@@ -16,7 +16,10 @@ module.exports = config:
   plugins:
     sass:
       options:
-        includePaths: ['node_modules/bootstrap/scss']
+        includePaths: [
+          'node_modules/bootstrap/scss',
+          'node_modules/font-awesome/scss'
+        ]
     static:
       processors: [
         require('html-brunch-static') {

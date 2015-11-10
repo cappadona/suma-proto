@@ -12,11 +12,20 @@ html(lang='en')
     nav.navbar.navbar-light.navbar-fixed-top.bg-faded
       ul.nav.nav-pills
         li.nav-item
-          a.nav-link.btn.btn-warning-outline(href='#') Undo last count
+          a.nav-link.btn.btn-warning-outline(href='#')
+            i.fa.fa-undo
+            |  Undo
+            span.hidden-xs-down  last count
         li.nav-item.abandon
-          a.nav-link.btn.btn-danger-outline(href='#') Abandon counts
+          a.nav-link.btn.btn-danger-outline(href='#')
+            i.fa.fa-ban
+            |  Abandon
+            span.hidden-xs-down  counts
         li.nav-item.pull-right
-          a.nav-link.btn.btn-success-outline(href='#') Finish collecting
+          a.nav-link.btn.btn-success-outline(href='#')
+            i.fa.fa-check
+            |  Finish
+            span.hidden-xs-down  collecting
     .container-fluid
       .row.row-offcanvas.row-offcanvas-left
         .col-xs-12

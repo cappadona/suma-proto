@@ -1,5 +1,9 @@
 .nav-pills {
   .nav-item.abandon {
-    margin-left: 2em;
+    margin-left: .5em;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: 2em;
+    }
   }
 }
