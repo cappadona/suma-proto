@@ -28,115 +28,112 @@ html(lang='en')
             span.hidden-xs-down  collecting
     .container-fluid
       .row.row-offcanvas.row-offcanvas-left
-        .col-xs-12
-          p
-            button(data-toggle='offcanvas').btn.btn-primary.btn-xs toggle
+        #counting.col-xs-12
           h3#current_loc_label Mann Library
-          #counting_container
-            form#count-form.row
-              #activity-groups
-                fieldset.form-group.activity-group.col-xs-12.col-sm-6
-                  h5.activity-group-label Participants
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check1', role='button')
-                      input#check1(type='checkbox', autocomplete='off')
-                      | 1 person
-                    label.btn.btn-secondary(for='check4', role='button')
-                      input#check4(type='checkbox', autocomplete='off')
-                      | 2-4 people
-                    label.btn.btn-secondary(for='check2', role='button')
-                      input#check2(type='checkbox', autocomplete='off')
-                      | 5-7 people
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check5', role='button')
-                      input#check5(type='checkbox', autocomplete='off')
-                      | 8-10 people
-                    label.btn.btn-secondary(for='check3', role='button')
-                      input#check3(type='checkbox', autocomplete='off')
-                      | 10+ people
-                    label.btn.btn-secondary(for='check6', role='button')
-                      input#check6(type='checkbox', autocomplete='off')
-                      | 0 (No one is present)
-                fieldset.form-group.activity-group.col-xs-12.col-sm-6
-                  h5.activity-group-label Activity
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check7', role='button')
-                      input#check7(type='checkbox', autocomplete='off')
-                      | Studying/reading
-                    label.btn.btn-secondary(for='check8', role='button')
-                      input#check8(type='checkbox', autocomplete='off')
-                      | Socializing
-                    label.btn.btn-secondary(for='check9', role='button')
-                      input#check9(type='checkbox', autocomplete='off')
-                      | NA - no activity
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check10', role='button')
-                      input#check10(type='checkbox', autocomplete='off')
-                      | Sleeping
-                    label.btn.btn-secondary(for='check11', role='button')
-                      input#check11(type='checkbox', autocomplete='off')
-                      | Chilling (not sleeping)
-                .clearfix
-                fieldset.form-group.activity-group.col-xs-12.col-sm-6
-                  h5.activity-group-label Furniture Usage
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check12', role='button')
-                      input#check12(type='checkbox', autocomplete='off')
-                      | Study Carrel/Pod
-                    label.btn.btn-secondary(for='check13', role='button')
-                      input#check13(type='checkbox', autocomplete='off')
-                      | Group Table (2+)
-                    label.btn.btn-secondary(for='check14', role='button')
-                      input#check14(type='checkbox', autocomplete='off')
-                      | Table Counter Height
-                    label.btn.btn-secondary(for='check15', role='button')
-                      input#check15(type='checkbox', autocomplete='off')
-                      | Soft Seating (Couches / Soft Chairs / Ottomans)
-                    label.btn.btn-secondary(for='check16', role='button')
-                      input#check16(type='checkbox', autocomplete='off')
-                      | Fixed LCD
-                    label.btn.btn-secondary(for='check17', role='button')
-                      input#check17(type='checkbox', autocomplete='off')
-                      | Whiteboards
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check18', role='button')
-                      input#check18(type='checkbox', autocomplete='off')
-                      | Indiv Table (1 Only)
-                    label.btn.btn-secondary(for='check19', role='button')
-                      input#check19(type='checkbox', autocomplete='off')
-                      | Booth
-                    label.btn.btn-secondary(for='check20', role='button')
-                      input#check20(type='checkbox', autocomplete='off')
-                      | Laptop Table
-                    label.btn.btn-secondary(for='check21', role='button')
-                      input#check21(type='checkbox', autocomplete='off')
-                      | Bean Bags
-                    label.btn.btn-secondary(for='check22', role='button')
-                      input#check22(type='checkbox', autocomplete='off')
-                      | Mobile LCD
-                    label.btn.btn-secondary(for='check23', role='button')
-                      input#check23(type='checkbox', autocomplete='off')
-                      | N/A - no furniture
-                fieldset.form-group.activity-group.col-xs-12.col-sm-6
-                  h5.activity-group-label Computer Usage
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check24', role='button')
-                      input#check24(type='checkbox', autocomplete='off')
-                      | Built in Computer
-                    label.btn.btn-secondary(for='check25', role='button')
-                      input#check25(type='checkbox', autocomplete='off')
-                      | Tablet
-                  .btn-group-vertical.col-xs-6(data-toggle="buttons")
-                    label.btn.btn-secondary(for='check26', role='button')
-                      input#check26(type='checkbox', autocomplete='off')
-                      | Laptop
-                    label.btn.btn-secondary(for='check27', role='button')
-                      input#check27(type='checkbox', autocomplete='off')
-                      | NA - no computer
-        nav.footer.navbar.navbar-light.navbar-fixed-bottom.bg-faded
-          input#countInput(type='number', name='countInput', value='1', min='1' hidden)
-          input#goesup.btn.btn-primary-outline.btn-lg.center-block(type='button', name='goesup', value='Count')
+          form#count-form.row
+            #activity-groups
+              fieldset.form-group.activity-group.col-xs-12.col-sm-6
+                h5.activity-group-label Participants
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check1', role='button')
+                    input#check1(type='checkbox', autocomplete='off')
+                    | 1 person
+                  label.btn.btn-secondary(for='check4', role='button')
+                    input#check4(type='checkbox', autocomplete='off')
+                    | 2-4 people
+                  label.btn.btn-secondary(for='check2', role='button')
+                    input#check2(type='checkbox', autocomplete='off')
+                    | 5-7 people
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check5', role='button')
+                    input#check5(type='checkbox', autocomplete='off')
+                    | 8-10 people
+                  label.btn.btn-secondary(for='check3', role='button')
+                    input#check3(type='checkbox', autocomplete='off')
+                    | 10+ people
+                  label.btn.btn-secondary(for='check6', role='button')
+                    input#check6(type='checkbox', autocomplete='off')
+                    | 0 (No one is present)
+              fieldset.form-group.activity-group.col-xs-12.col-sm-6
+                h5.activity-group-label Activity
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check7', role='button')
+                    input#check7(type='checkbox', autocomplete='off')
+                    | Studying/reading
+                  label.btn.btn-secondary(for='check8', role='button')
+                    input#check8(type='checkbox', autocomplete='off')
+                    | Socializing
+                  label.btn.btn-secondary(for='check9', role='button')
+                    input#check9(type='checkbox', autocomplete='off')
+                    | NA - no activity
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check10', role='button')
+                    input#check10(type='checkbox', autocomplete='off')
+                    | Sleeping
+                  label.btn.btn-secondary(for='check11', role='button')
+                    input#check11(type='checkbox', autocomplete='off')
+                    | Chilling (not sleeping)
+              .clearfix
+              fieldset.form-group.activity-group.col-xs-12.col-sm-6
+                h5.activity-group-label Furniture Usage
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check12', role='button')
+                    input#check12(type='checkbox', autocomplete='off')
+                    | Study Carrel/Pod
+                  label.btn.btn-secondary(for='check13', role='button')
+                    input#check13(type='checkbox', autocomplete='off')
+                    | Group Table (2+)
+                  label.btn.btn-secondary(for='check14', role='button')
+                    input#check14(type='checkbox', autocomplete='off')
+                    | Table Counter Height
+                  label.btn.btn-secondary(for='check15', role='button')
+                    input#check15(type='checkbox', autocomplete='off')
+                    | Soft Seating (Couches / Soft Chairs / Ottomans)
+                  label.btn.btn-secondary(for='check16', role='button')
+                    input#check16(type='checkbox', autocomplete='off')
+                    | Fixed LCD
+                  label.btn.btn-secondary(for='check17', role='button')
+                    input#check17(type='checkbox', autocomplete='off')
+                    | Whiteboards
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check18', role='button')
+                    input#check18(type='checkbox', autocomplete='off')
+                    | Indiv Table (1 Only)
+                  label.btn.btn-secondary(for='check19', role='button')
+                    input#check19(type='checkbox', autocomplete='off')
+                    | Booth
+                  label.btn.btn-secondary(for='check20', role='button')
+                    input#check20(type='checkbox', autocomplete='off')
+                    | Laptop Table
+                  label.btn.btn-secondary(for='check21', role='button')
+                    input#check21(type='checkbox', autocomplete='off')
+                    | Bean Bags
+                  label.btn.btn-secondary(for='check22', role='button')
+                    input#check22(type='checkbox', autocomplete='off')
+                    | Mobile LCD
+                  label.btn.btn-secondary(for='check23', role='button')
+                    input#check23(type='checkbox', autocomplete='off')
+                    | N/A - no furniture
+              fieldset.form-group.activity-group.col-xs-12.col-sm-6
+                h5.activity-group-label Computer Usage
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check24', role='button')
+                    input#check24(type='checkbox', autocomplete='off')
+                    | Built in Computer
+                  label.btn.btn-secondary(for='check25', role='button')
+                    input#check25(type='checkbox', autocomplete='off')
+                    | Tablet
+                .btn-group-vertical.col-xs-6(data-toggle="buttons")
+                  label.btn.btn-secondary(for='check26', role='button')
+                    input#check26(type='checkbox', autocomplete='off')
+                    | Laptop
+                  label.btn.btn-secondary(for='check27', role='button')
+                    input#check27(type='checkbox', autocomplete='off')
+                    | NA - no computer
         #sidebar.col-xs-6.col-sm-3.sidebar-offcanvas.bg-faded
+          button(data-toggle='offcanvas').btn.btn-secondary-outline.btn-sm.pull-right
+            i.fa.fa-angle-double-right
+            span.sr-only toggle
           h5.initiative-select Select an initiative
           form#init_form
             select#init_selector
@@ -163,6 +160,9 @@ html(lang='en')
                 a#loc29EE58C71B174640956542ED658C8F53(href='29EE58C71B174640956542ED658C8F53')
                   | 3rd Floor
                   span.locCount
+        nav.footer.navbar.navbar-light.navbar-fixed-bottom.bg-faded
+          input#countInput(type='number', name='countInput', value='1', min='1' hidden)
+          input#goesup.btn.btn-primary-outline.btn-lg.center-block(type='button', name='goesup', value='Count')
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons(tabindex='-1', role='dialog', aria-describedby='spaceAssessDialog', aria-labelledby='ui-id-1', style='height: auto; width: auto; top: 246px; left: 88px; display: none; z-index: 101; overflow: visible;')
       .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix
         span#ui-id-1.ui-dialog-title Space Usage Census Tool
