@@ -12,7 +12,7 @@ module.exports = config:
           'node_modules/jquery/dist/jquery.js'
         ]
     stylesheets:
-      joinTo: 'app.css'
+      joinTo: 'css/app.css'
   plugins:
     sass:
       options:
