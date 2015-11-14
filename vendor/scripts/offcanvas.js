@@ -4,15 +4,7 @@ var $ = require('jquery');
   'use strict';
 
   var toggleSidemenu = function () {
-    if ($('.offcanvas').hasClass('offcanvas-active')) {
-      // Close sidemenu
-      $('.offcanvas').removeClass('offcanvas-active');
-      $('.close-canvas').removeClass('close-canvas-active');
-    } else {
-      // Openn sidemenu
-      $('.offcanvas').addClass('offcanvas-active');
-      $('.close-canvas').addClass('close-canvas-active');
-    }
+    $('.offcanvas, .close-canvas').toggleClass('active');
   }
 
   // Toggle Nav on Click
