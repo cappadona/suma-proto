@@ -29,7 +29,8 @@ html(lang='en')
     .container-fluid
       .row.offcanvas
         #counting.col-xs-12
-          h3#current_loc_label Mann Library
+          h3#current-loc-label Space Usage
+            span.label.label-default.label-location Mann Library &gt; 2nd Floor
           form#count-form.row
             #activity-groups
               fieldset.form-group.activity-group.col-xs-12.col-sm-6
@@ -135,29 +136,29 @@ html(lang='en')
             i#slider.fa.fa-angle-double-right
             span.sr-only toggle
           h5.initiative-select Select an initiative
-          form#init_form
-            select#init_selector
+          form#init-form
+            select#init-selector
               option(value='') --
-              option.initOpt(value='8E092130E36645E5B995DF5DDAF86DD3') FOD
-              option.initOpt(value='96B74A9EC9C1496E88B6C51B41865D9C' selected) Space Usage
-          h5#loc_header(style='display: block;') And a location:
-          #loc_lists
-            ul.loc_list
-              h6 Mann Library
-              li.loc_item
-                a#loc94608D20871E41018BDF588AC767EAAF(href='94608D20871E41018BDF588AC767EAAF')
+              option.initOpt(value='FOD') FOD
+              option.initOpt(value='Space Usage' selected) Space Usage
+          h5#loc-header(style='display: block;') And a location:
+          #loc-lists
+            h6 Mann Library
+            ul.loc-list
+              li.loc-item
+                a#loc-1(href='#')
                   | Basement
                   span.locCount
-              li.loc_item
-                a#loc58CC4495583748449CE194C93B8BA7EB(href='58CC4495583748449CE194C93B8BA7EB')
+              li.loc-item
+                a#loc-2(href='#')
                   | 1st Floor
                   span.locCount
-              li.loc_item
-                a#locE9E6160B1394412E85922AECAEA2CC6F(href='E9E6160B1394412E85922AECAEA2CC6F')
+              li.loc-item
+                a#loc-3(href='#')
                   | 2nd Floor
                   span.locCount
-              li.loc_item
-                a#loc29EE58C71B174640956542ED658C8F53(href='29EE58C71B174640956542ED658C8F53')
+              li.loc-item
+                a#loc-4(href='#')
                   | 3rd Floor
                   span.locCount
           .close-canvas
