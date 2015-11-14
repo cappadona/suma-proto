@@ -167,7 +167,9 @@ html(lang='en')
                   span.locCount
           .close-canvas
       nav.footer.navbar.navbar-light.navbar-fixed-bottom.bg-faded
-        input#countInput(type='number', name='countInput', value='1', min='1' hidden)
-        input#goesup.btn.btn-primary-outline.btn-lg.center-block(type='button', name='goesup', value='Count')
+        #count-it.input-group.pull-right
+          input#count-input.form-control(type='number', name='count-input', value='1', min='1', pattern="[0-9]*")
+          span.input-group-btn
+            button#goes-up.btn.btn-primary-outline(type='button', name='goesup', value='Count') Count
     script(src='js/app.js')
     script(src='js/vendor.js')
