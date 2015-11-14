@@ -5,59 +5,82 @@ html {
 body {
   height: 100%;
   overflow-x: hidden;
-  padding-top: 3.65rem;
-}
-footer {
-  padding: 2rem 0;
+  padding: 3.65rem 0;
 }
 .container-fluid {
-  height: 100%;
-}
-.row-offcanvas {
+  overflow: hidden;
   position: relative;
+  width: 100%;
+}
+.offcanvas {
   height: 100%;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-  transition: all .25s ease-out;
+  position: relative;
+  width: 100%;
+
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  -webkit-transition: 300ms ease all;
+  -moz-transition: 300ms ease all;
+  -ms-transition: 300ms ease all;
+  -o-transition: 300ms ease all;
+  transition: 300ms ease all;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-.row-offcanvas-right {
-  right: 0;
-  .sidebar-offcanvas {
-    right: -50%;
-    @include media-breakpoint-up(sm) {
-      right: -30%;
-    }
-  }
-  &.active {
-    right: 50%;
-    @include media-breakpoint-up(sm) {
-      right: 30%;
-    }
-  }
-}
-.row-offcanvas-left {
-  left: 0;
-  .sidebar-offcanvas {
-    left: -50%;
-    @include media-breakpoint-up(sm) {
-      left: -30%;
-    }
-  }
-  &.active {
-    left: 50%;
-    @include media-breakpoint-up(sm) {
-      left: 30%;
-    }
-  }
+.offcanvas-active {
+  -webkit-transform: translateX(266px);
+  -moz-transform: translateX(266px);
+  -ms-transform: translateX(266px);
+  -o-transform: translateX(266px);
+  transform: translateX(266px);
+
+  -webkit-transform: translate3d(266px, 0, 0);
+  -moz-transform: translate3d(266px, 0, 0);
+  -ms-transform: translate3d(266px, 0, 0);
+  -o-transform: translate3d(266px, 0, 0);
+  transform: translate3d(266px, 0, 0);
 }
 .sidebar-offcanvas {
+  height: 100%;
+  left: -266px;
   position: absolute;
   top: 0;
+  width: 300px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#counting {
   height: 100%;
-  width: 58%;
-  @include media-breakpoint-up(sm) {
-    width: 34%;
-  }
-  @include media-breakpoint-up(lg) {
-    width: 33%;
-  }
+  position: relative;
+}
+.close-canvas {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+.close-canvas-active {
+  display: block;
 }
