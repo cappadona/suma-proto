@@ -8,8 +8,10 @@ var $ = require('jquery');
   }
 
   // Toggle Nav on Click
-  $('.toggle-sidemenu, .close-canvas').click(function() {
-    toggleSidemenu();
+  $(document).ready(function() {
+    $('.toggle-sidemenu, .close-canvas').click(function() {
+      toggleSidemenu();
+    });
   });
 
 })(document, window);
