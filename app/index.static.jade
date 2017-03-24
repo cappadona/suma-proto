@@ -168,7 +168,7 @@ html(lang='en')
           .close-canvas
       nav.footer.navbar.navbar-light.navbar-fixed-bottom.bg-faded
         #count-it.input-group.pull-right
-          input#count-input.form-control(type='number', name='count-input', value='1', min='1', pattern="[0-9]*")
+          input#count-input.form-control(type='number', name='count-input', value='1', min='1', pattern="[0-9]*", onfocus="this.value='';")
           span.input-group-btn
             button#goes-up.btn.btn-primary-outline(type='button', name='goesup', value='Count') Count
     script(src='js/app.js')
